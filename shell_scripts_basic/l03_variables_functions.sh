@@ -18,10 +18,8 @@ my_function() {
     #script local variable
     local SUBJECT=12345   #do not overwrite
     echo "my_function first parameter: '$1', bash script first param: $_FIRST_PARAM, local SUBJECT:'$SUBJECT'"
-    echo $SUBJECT
 }
 my_function 'fun_param'
-
 echo "env value '$SUBJECT' has not changed"
 
 
