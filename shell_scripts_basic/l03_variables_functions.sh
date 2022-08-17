@@ -52,3 +52,6 @@ echo ${MY_ARRAY[@]}     #>2 ab c true 1.0 111,222
 echo ${MY_ARRAY[@]:2:2} #>true 1.0         take two items, starting from index 2
 echo ${MY_ARRAY[@]::1}  #1                 take one from the beginning
 echo ${MY_ARRAY[@]:3}   #111,222           take from index 3 till the end
+
+
+echo {0..10}            # 0 1 2 3 4 5 6 7 8 9 10
