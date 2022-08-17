@@ -8,7 +8,6 @@ echo "escape sequence path is: \$PATH"  #makes special symbols "unspecial"
 echo `backtick path is: $PATH`          #backtick: not found    - tries executing content, and fails
 
 
-
 echo "------------ FLOWCONTROL"
 
 rm -rf ~/and_list_folder
@@ -27,4 +26,5 @@ mkdir ~/or_list_folder || echo "created folder fails, tries next command"
 echo "Creating backup folder" && mkdir ~/backup_folder || echo "WARNING: backup folder exists (should not see this)"
 echo "Creating backup folder again" && mkdir ~/backup_folder || echo "WARNING: backup folder exists"
 
-echo "copy with error" && cp /non_existing ~/backup_folder || echo "ERR: backup failed"
+print `cp /non_existing ~/backup_folder`
+echo "copy with error" && cp /non_existing ~/backup_folder || echo "ERR: backup failed, exit code $?"   # copy exited with non-zero
