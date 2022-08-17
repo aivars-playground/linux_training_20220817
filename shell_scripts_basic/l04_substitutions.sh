@@ -1,17 +1,13 @@
 #!/bin/bash
 
-#command substitution
+#command substitution  (Command substitution allows the output of a command to replace the command itself)
 echo "standarddate:         $(date)"
-date=$(date +"%x %r %Z")
-echo "substituted_date:     ${date}"
-echo "original date:        $(command date)"
-echo "or simply:            $(date)"
+echo "substituted_date:     $(date +"%x %r %Z")"
+
+# process substitution (process substitution allows you to turn a command into a temporary file)
 
 echo <(echo "HI")       # /dev/fd/63    'echo "HI"'  output is inserted into a file descriptor
 cat  <(echo "HI")       # Hi            cat reads from file descriptor
-
-
-# process substitution
 
 # ls /tmp > tmp1
 # ls /bin > tmp2
