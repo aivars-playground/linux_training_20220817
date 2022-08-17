@@ -46,9 +46,9 @@ echo ${MY_ARRAY[@]}     #> 2 ab c true 1.0  all values
 echo ${#MY_ARRAY[@]}    #>4                  array length
 
 MY_ARRAY+=(111,222)
-echo ${#MY_ARRAY[@]}    
-echo ${MY_ARRAY[@]}     
+echo ${#MY_ARRAY[@]}    #>5
+echo ${MY_ARRAY[@]}     #>2 ab c true 1.0 111,222
 
-echo ${MY_ARRAY[@]:2:2}  #>true 1.0         take two items, starting from index 2
-echo ${MY_ARRAY[@]::1}   #1                 take one from the beginning
-echo ${MY_ARRAY[@]:3}    #111,222           take from index 3 till the end
+echo ${MY_ARRAY[@]:2:2} #>true 1.0         take two items, starting from index 2
+echo ${MY_ARRAY[@]::1}  #1                 take one from the beginning
+echo ${MY_ARRAY[@]:3}   #111,222           take from index 3 till the end
