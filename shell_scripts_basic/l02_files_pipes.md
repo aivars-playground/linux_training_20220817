@@ -60,4 +60,6 @@ cat > /dev/tcp/localhost/8080<< EOF
  Host: localhost:8080
  Connection: keep-alive
 EOF
+
+nc -l -p 8080  #test solution by opening the port and logging the output
 ```
